@@ -1,0 +1,42 @@
+
+{% extends 'layout.html' %}
+
+{% block body %}
+<!-- Products & Services -->
+<style>
+	.blog{
+		background-color: rgb(228, 255, 201);
+	}
+</style>
+<section class="blog py-5">
+    <div class="container py-md-5">
+        <h3 class="heading mb-sm-5 mb-4 text-center"> Our Services</h3>
+        <div class="row blog-grids">
+            <div class="col-lg-6 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg-0 pb-5">
+                <div class="big-div">
+                    <img src="{{ url_for('static', filename='images/2.jpg') }}" class="img-fluid" alt="" />
+                    <a href="{{ url_for('crop_recommend') }}">
+                        <div class="blog-info">
+                            <h4>Crop</h4>
+                            <p class="mt-2"> Type of crops to be cultivated</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5">
+                <div class="big-div">
+                    <img src="{{ url_for('static', filename='images/t.jpeg') }}" class="img-fluid" alt="" />
+                    <a href="{{ url_for('fertilizer_recommendation') }}">
+                        <div class="blog-info">
+                            <h4>Fertilizer</h4>
+                            <p class="mt-2">Type of fertilizer best suited</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //Products & Services -->
+{% endblock %}
+

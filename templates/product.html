@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!-- Product Page -->
+<section class="product py-5">
+    <style>
+        .product {
+            background-color: rgb(228, 255, 201);
+        }
+
+        .product-item {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            width: 200px; /* Set a fixed width for all images */
+            height: 200px; /* Set a fixed height for all images */
+            object-fit: cover; /* Maintain aspect ratio */
+        }
+    </style>
+    <div class="container py-md-5">
+        <h3 class="heading mb-sm-5 mb-4 text-center"> Our Crops</h3>
+        <div class="row product-thumbnails">
+            {% for crop in crops %}
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="product-item">
+                    <img src="{{ url_for('static', filename='images/crop/' + crop.lower() + '.jpg') }}" class="img-fluid" alt="{{ crop }}" />
+                    <h4 class="mt-2">{{ crop }}</h4>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- //Product Page -->
+{% endblock %}

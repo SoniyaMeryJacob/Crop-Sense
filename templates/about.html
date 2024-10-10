@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<!-- About Us Section -->
+
+<section class="about-us" style="background-color: rgb(228, 255, 201);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About Us</h2>
+                <p>We are CropSense, a company dedicated to revolutionizing the agriculture industry through advanced technologies. Our mission is to empower farmers with data-driven insights to optimize their farming strategies and improve crop yield.</p>
+                <p>At CropSense, we leverage state-of-the-art machine learning and deep learning algorithms to analyze various factors affecting crop growth, such as soil conditions, weather patterns, and pest threats. By providing accurate recommendations and insights, we enable farmers to make informed decisions and maximize their profitability.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='images/about.jpeg') }}" class="img-fluid" alt="About Us Image">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About Us Section -->
+{% endblock %}

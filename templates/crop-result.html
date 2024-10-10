@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<style>
+  body {
+    background-color: rgb(228, 255, 201);
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+  }
+
+  .mt-0 {
+    margin-top: 50px !important; /* Adjust as needed */
+  }
+</style>
+
+<div class="container py-2 mx-auto my-50 h-10" style="margin: 12rem;">
+  <div class="row">
+    <div class="col-sm py-2 py-md-3">
+      <div class="card card-body" style="justify-content: center; background-color: rgba(255, 255, 255, 0.9);">
+        <h1 class="text-center" style="margin-top:5%;">
+          <b>You should grow <span class="gold-text"><i>{{ prediction }}</i></span> in your farm</b>
+          <br><br>
+          <img src="{{ url_for('static', filename=pred) }}" width="780px" height="450px" alt="{{ prediction }}">
+         
+      </h1>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
