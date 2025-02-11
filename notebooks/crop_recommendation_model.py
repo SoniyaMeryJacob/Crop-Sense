@@ -20,7 +20,7 @@ from sklearn.metrics import classification_report
 import warnings
 warnings.filterwarnings('ignore')
 
-df = pd.read_csv('https://raw.githubusercontent.com/soniya2205/CropSense/master/Data/crop_recommendation.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/SoniyaMeryJacob/Crop-Sense/refs/heads/master/Data/crop_recommendation.csv')
 
 df.head()
 
